@@ -28,12 +28,12 @@ This engine models an unsecured retail loan portfolio (personal loans, credit co
 
 ```mermaid
 graph TD
-    A[Raw Loan Portfolio Ingestion<br/>50,000 Records | 12 Attributes] --> B[Univariate Risk Profiling & EDA<br/>Bad Rate Analysis by Segment]
-    B --> C[Feature Engineering: WoE & IV Screening<br/>Monotonic Binning & Predictor Ranking]
-    C --> D[Logistic Regression Model Training<br/>Probability of Default PD Calibration]
-    D --> E[Scorecard Scaling Engine<br/>Base Odds 50:1 @ 600 pts | PDO = 20 pts<br/>300 - 850 Range]
-    E --> F[Basel Regulatory Engine<br/>EL = PD x LGD x EAD | LGD = 45%]
-    F --> G[Interactive Executive Risk Cockpit<br/>Tableau Public Deployment]
+    A["Raw Loan Portfolio Ingestion<br/>(50,000 Records, 12 Attributes)"] --> B["Univariate Risk Profiling & EDA<br/>(Bad Rate Analysis by Segment)"]
+    B --> C["Feature Engineering: WoE & IV Screening<br/>(Monotonic Binning & Predictor Ranking)"]
+    C --> D["Logistic Regression Model Training<br/>(Probability of Default PD Calibration)"]
+    D --> E["Scorecard Scaling Engine<br/>(Base Odds 50:1 @ 600 pts, PDO = 20 pts, 300 - 850 Range)"]
+    E --> F["Basel Regulatory Engine<br/>(EL = PD x LGD x EAD, LGD = 45%)"]
+    F --> G["Interactive Executive Risk Cockpit<br/>(Tableau Public Deployment)"]
 ```
 
 ---
