@@ -44,10 +44,10 @@ graph TD
 Continuous financial attributes were transformed into monotonic risk bins to linearize log-odds and suppress outlier variance. 
 
 For each attribute bin $i$:
-$$\text{WoE}_i = \ln\left(\frac{\% \text{ of All Non-Defaulters (Good)}_i}{\% \text{ of All Defaulters (Bad)}_i}\right)$$
+$$\text{WoE}_i = \ln\left(\frac{\text{Dist}(\text{Good})_i}{\text{Dist}(\text{Bad})_i}\right) = \ln\left(\frac{\text{Good}_i / \text{Total Good}}{\text{Bad}_i / \text{Total Bad}}\right)$$
 
 Overall predictive strength was evaluated using Information Value (IV):
-$$\text{IV} = \sum_{i=1}^{k} \left(\% \text{ Good}_i - \% \text{ Bad}_i\right) \times \text{WoE}_i$$
+$$\text{IV} = \sum_{i=1}^{k} \left(\text{Dist}(\text{Good})_i - \text{Dist}(\text{Bad})_i\right) \times \text{WoE}_i$$
 
 #### Feature Screening Results:
 | Feature | Information Value (IV) | Regulatory Predictive Rating |
